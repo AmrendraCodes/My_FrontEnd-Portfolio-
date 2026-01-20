@@ -198,4 +198,12 @@ border-radius: 20px;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(100, 149, 237, 0.5);
 }
+.contact {
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+
+
+
 
