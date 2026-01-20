@@ -209,6 +209,52 @@ border-radius: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+.contact > div {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+.contact h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: black;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 15px;
+}
+.contact h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    border-radius: 20px;
+}
+.contact h3{
+    font-size: 20px;
+    color: #020617;
+    line-height: 1.6;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+      
+}
+.contact > div button {
+    padding: 14px 28px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
 
 
 
