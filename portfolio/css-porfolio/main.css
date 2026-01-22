@@ -9,7 +9,7 @@ body {
     background-color: #F0F0F0;
     color: black;
     line-height: 1.6;
-    min-width: 100vh;
+    min-width: 100%;
 }
 
 .navbar {
@@ -387,10 +387,6 @@ form button:active {
     }
 }
 
-
-
-
-
 /* New Footer Styles */
 .site-footer {
     background-color: #fff;
@@ -487,8 +483,120 @@ form button:active {
 }
 
 @media (max-width: 768px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Navbar Responsive */
+    .navbar {
+        position: relative;
+        padding: 10px;
+    }
+
+    .navbar-left {
+        justify-content: center;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+        border: none;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    /* Hero Responsive */
+    .hero {
+        margin: 1rem;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero a {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    /* Skills & Project Cards */
+    .skillcard,
+    .project-card {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+        box-sizing: border-box;
+    }
+
+    /* Contact Section */
+    .contact {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        margin: 1rem;
+    }
+
+    .contact>div {
+        padding: 0;
+        min-width: 0;
+    }
+
+    .contact h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Footer Responsive */
+    .site-footer {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
     .footer-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: auto;
+    }
+
+    .footer-section p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-section ul li a {
+        display: block;
+        padding: 5px;
     }
 }
