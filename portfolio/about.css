@@ -238,3 +238,118 @@
         font-size: 0.85rem;
     }
 }
+
+/* Professional Experience Section Styles */
+.professional-experience-section {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--background-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    animation: fadeInUp 0.8s ease-out backwards;
+    animation-delay: 0.25s;
+}
+
+.professional-experience-section h2 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.experience-container {
+    display: flex;
+    /* Flexbox as requested */
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background-color: #f8fafc;
+    border-left: 5px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.role-title {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.company-name {
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: var(--background-white);
+    background-color: var(--secondary-color);
+    padding: 4px 12px;
+    border-radius: 15px;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+/* Description Expand/Reveal Interaction */
+.role-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+.role-description p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+/* Hover State for description */
+.experience-card:hover .role-description {
+    max-height: 100px;
+    /* Sufficient height for text */
+    opacity: 1;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .card-header {
+        flex-direction: column;
+    }
+
+    .duration {
+        order: -1;
+        /* Move date to top on mobile if preferred, or keep as is */
+        margin-bottom: 0.5rem;
+    }
+}

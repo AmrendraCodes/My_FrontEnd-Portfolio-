@@ -12,7 +12,14 @@
 <body>
     <nav class="navbar">
         <div class="navbar-left">
-            <h1>My Portfolio</h1>
+            <a href="index.html" class="brand-link">
+                <h1>My Portfolio</h1>
+            </a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -52,6 +59,53 @@
             </ul>
         </section>
 
+        <section class="professional-experience-section">
+            <h2>Professional Experience</h2>
+            <div class="experience-container">
+                <!-- Role 1 -->
+                <article class="experience-card">
+                    <div class="card-header">
+                        <div class="header-main">
+                            <h3 class="role-title">Senior Developer</h3>
+                            <h4 class="company-name">Tech Company</h4>
+                        </div>
+                        <span class="duration">2022 – Present</span>
+                    </div>
+                    <div class="role-description">
+                        <p>Leading frontend development and mentoring junior developers.</p>
+                    </div>
+                </article>
+
+                <!-- Role 2 -->
+                <article class="experience-card">
+                    <div class="card-header">
+                        <div class="header-main">
+                            <h3 class="role-title">Full Stack Developer</h3>
+                            <h4 class="company-name">Startup Inc</h4>
+                        </div>
+                        <span class="duration">2020 – 2022</span>
+                    </div>
+                    <div class="role-description">
+                        <p>Built scalable web applications using React and Node.js.</p>
+                    </div>
+                </article>
+
+                <!-- Role 3 -->
+                <article class="experience-card">
+                    <div class="card-header">
+                        <div class="header-main">
+                            <h3 class="role-title">Junior Developer</h3>
+                            <h4 class="company-name">Digital Agency</h4>
+                        </div>
+                        <span class="duration">2018 – 2020</span>
+                    </div>
+                    <div class="role-description">
+                        <p>Developed responsive websites and learned modern web technologies.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section class="experience-section">
             <h2>My Learning Journey</h2>
             <p>My coding journey began with a curiosity about how websites work, which led me to self-study through
@@ -74,6 +128,7 @@
     <footer class="page-footer">
         <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -41,6 +41,11 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.hamburger {
+    display: none;
+    /* Hidden on desktop */
+}
+
 .navbar-left h1 {
     font-size: 1.5rem;
     background: linear-gradient(to right, #a78bfa, #818cf8);
@@ -78,6 +83,22 @@ body {
     background: rgba(139, 92, 246, 0.2);
     /* Light violet tint */
     box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Brand Link Specific Overrides */
+.navbar .brand-link {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0;
+    display: block;
+    /* Ensure it wraps the h1 properly */
+}
+
+.navbar .brand-link:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: scale(1.02);
+    /* Subtle pop instead of pill bg */
 }
 
 /* Modern Hero Section */
@@ -585,9 +606,58 @@ form button:hover {
         padding: 15px;
     }
 
+    /* Hamburger Menu Styles */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+        /* Above mobile menu */
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .navbar ul {
+        display: none;
+        /* Hidden by default on mobile */
+        position: absolute;
+        top: 100%;
+        /* Below navbar */
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(15px);
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar ul.active {
+        display: flex;
+        /* Visible when active */
     }
 
     .hero h1 {
