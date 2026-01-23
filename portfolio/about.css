@@ -1,0 +1,173 @@
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #64748b;
+    --background-light: #f8fafc;
+    --background-white: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --line-height-relaxed: 1.6;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --max-width: 1100px;
+}
+
+/* Main content layout */
+.main-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Section styling */
+.about-section,
+.experience-section,
+.goals-section {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--background-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.about-section h2,
+.experience-section h2,
+.goals-section h2 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.about-section p,
+.experience-section p,
+.goals-section p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+/* Skills section styling */
+.skills-section {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+}
+
+.skills-section h2 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background-color: var(--background-white);
+    color: var(--text-primary);
+    padding: 0.75rem 1.25rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background-color: var(--primary-color);
+    color: var(--background-white);
+}
+
+/* Footer styling */
+.page-footer {
+    background-color: var(--background-light);
+    text-align: center;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.page-footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: var(--spacing-sm);
+    }
+    
+    .about-section,
+    .experience-section,
+    .goals-section,
+    .skills-section {
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .about-section h2,
+    .experience-section h2,
+    .goals-section h2,
+    .skills-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .skills-list {
+        gap: 0.75rem;
+    }
+    
+    .skills-list li {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 0.75rem;
+    }
+    
+    .about-section h2,
+    .experience-section h2,
+    .goals-section h2,
+    .skills-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .about-section p,
+    .experience-section p,
+    .goals-section p {
+        font-size: 1rem;
+    }
+    
+    .skills-list li {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
