@@ -17,31 +17,35 @@ body {
     min-width: 100%;
 }
 
-/* Navbar with Glassmorphism */
+/* Navbar with Glassmorphism & Floating Pill Design */
 .navbar {
-    background: rgba(15, 23, 42, 0.9);
+    background: rgba(15, 23, 42, 0.85);
     /* Dark semi-transparent */
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: white;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    padding: 15px 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
     text-align: center;
     position: sticky;
-    top: 0;
+    top: 20px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 0 0 15px 15px;
-    /* Subtle rounding */
+    max-width: 1100px;
+    width: 92%;
+    margin: 0 auto 30px auto;
+    border-radius: 50px;
+    /* Pill shape */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-left h1 {
     font-size: 1.5rem;
     background: linear-gradient(to right, #a78bfa, #818cf8);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
 }
@@ -49,7 +53,7 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 50px;
     padding: 0;
     margin: 0;
     border: none;
@@ -61,15 +65,19 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #cbd5e1;
+    color: #e2e8f0;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 30px;
 }
 
 .navbar a:hover {
     color: #fff;
-    text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+    background: rgba(139, 92, 246, 0.2);
+    /* Light violet tint */
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
 }
 
 /* Modern Hero Section */
@@ -111,6 +119,7 @@ body {
     margin-bottom: 0.5rem;
     background: linear-gradient(to right, #c084fc, #6366f1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
     letter-spacing: -1px;
@@ -200,10 +209,21 @@ body {
     margin-bottom: 3rem;
 }
 
+/* Container for equal height cards */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
 .skillcard {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 30px;
-    margin: 15px;
+    /* margin removed in favor of gap */
     background: white;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -255,6 +275,13 @@ body {
     margin-right: auto;
 }
 
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
 .project-card {
     background: white;
     padding: 2.5rem;
@@ -264,11 +291,13 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     transition: all 0.3 ease;
     color: #334155;
-    margin: 15px auto;
-    display: inline-block;
-    vertical-align: top;
+    /* margin: 15px auto; removed in favor of gap */
+    /* display: inline-block; removed */
+    /* vertical-align: top; removed */
     text-align: left;
     border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card h2 {
