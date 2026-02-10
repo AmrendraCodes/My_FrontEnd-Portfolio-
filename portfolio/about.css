@@ -101,6 +101,14 @@
     padding: 60px 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);  
 }
+.my-btn {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
 
 
 
