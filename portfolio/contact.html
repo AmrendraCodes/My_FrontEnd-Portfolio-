@@ -10,23 +10,25 @@
 
 <body>
     <nav class="navbar">
-        <div class="navbar-left">
-            <a href="index.html" class="brand-link">
-                <h1>My Portfolio</h1>
-            </a>
+        <div class="navbar-wrapper">
+            <div class="navbar-left">
+                <a href="index.html" class="brand-link">
+                    <h1>My Portfolio</h1>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="project.html">project</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
         </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="project.html">project</a></li>
-            <li><a href="contact.html">contact</a></li>
-        </ul>
     </nav>
 
     <section class="contact" style="margin-top: 50px;">
@@ -48,6 +50,30 @@
             <button type="button">Submit</button>
         </form>
     </section>
+    <script>
+        // Auto-highlight active navbar link based on current page URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.navbar a');
+            const currentPage = window.location.pathname;
+            
+            navLinks.forEach(link => {
+                // Remove any existing active class
+                link.classList.remove('active');
+                
+                // Get the href attribute
+                const href = link.getAttribute('href');
+                
+                // Check if the link matches the current page
+                if (href && (
+                    currentPage.includes(href.split('/').pop()) ||
+                    (currentPage.endsWith('/portfolio/') && href.includes('index.html')) ||
+                    (currentPage.endsWith('/portfolio') && href.includes('index.html'))
+                )) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 

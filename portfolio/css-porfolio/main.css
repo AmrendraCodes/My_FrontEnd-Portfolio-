@@ -18,33 +18,41 @@ body {
     min-width: 100%;
 }
 
-/* Navbar with Glassmorphism & Floating Pill Design */
+/* Navbar with Full Width & Centered Pill Design */
 .navbar {
-    background: rgba(15, 23, 42, 0.85);
-    /* Dark semi-transparent */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    color: white;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    padding: 15px 30px;
-    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
     position: sticky;
-    top: 20px;
+    top: 0;
     z-index: 1000;
+}
+
+.navbar-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    width: 92%;
-    margin: 0 auto 30px auto;
+    width: 90%;
+    max-width: 1200px;
+    padding: 15px 30px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
     border-radius: 50px;
-    /* Pill shape */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hamburger {
     display: none;
     /* Hidden on desktop */
+}
+
+.navbar-left {
+    flex-shrink: 0;
 }
 
 .navbar-left h1 {
@@ -59,10 +67,10 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     padding: 0;
     margin: 0;
-    border: none;
+    flex-shrink: 0;
 }
 
 .navbar ul li {
@@ -81,8 +89,15 @@ body {
 
 .navbar a:hover {
     color: #fff;
-    background: rgba(139, 92, 246, 0.2);
+    background: rgba(139, 92, 246, 0.3);
     /* Light violet tint */
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Active and Hover same effect - only visible on hover/click */
+.navbar a.active:hover {
+    color: #fff;
+    background: rgba(139, 92, 246, 0.3);
     box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
 }
 

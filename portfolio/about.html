@@ -7,35 +7,34 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-left">
-            <h1> <a href="/portfolio/index.html">My Portfolio</a></h1>
-        </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-list">
+    <nav class="navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-left">
+                <h1> <a href="/portfolio/index.html">My Portfolio</a></h1>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
-            <li ><a href="/portfolio/index.html">Home</a></li>
-            <li><a href="/portfolio/contact.html">Contact</a></li>
-            <li><a href="/portfolio/about.html">About</a></li>
-            <li><a href="/portfolio/project.html">Project</a></li>
-        </ul>
+                <li ><a href="/portfolio/index.html" class="active">Home</a></li>
+                <li><a href="/portfolio/contact.html" class="active">Contact</a></li>
+                <li><a href="/portfolio/about.html" class="active">About</a></li>
+                <li><a href="/portfolio/project.html" class="active">Project</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
     <div class="hero-heading">
         <h1>I'm Amrendra kumar</h1>
+        <h2>FrontEnd Devloper & Technical content Writer</h2>
+        <br>
         <p>I'm a passionate full-stack developer with expertise in building modern, scalable web applications. I love turning ideas into reality through clean code.</p>
-    <div class="short-desc">
-        <p>Hello! I'm a software developer with a passion for creating beautiful, functional, and user-centered digital experiences. With over 5 years of experience in the industry, I've worked on a diverse range of projects.
-
-My journey into web development started when I built my first website at age 16. Since then, I've been constantly learning and evolving with the ever-changing technology landscape.
-
-When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through blog posts and mentoring.
-
-Get in Touch</p>
+    <div class="my-btn">
+        <button> <a href="/portfolio/index.html">Home</a></button>
+        <button> <a href="/portfolio/contact.html">contact Us </a></button>
+    </div>
+    
     </div>
     </div>
     <section class="skill">
@@ -100,5 +99,29 @@ Get in Touch</p>
         </div>
         </div>
     </section>
+    <script>
+        // Auto-highlight active navbar link based on current page URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.navbar a');
+            const currentPage = window.location.pathname;
+            
+            navLinks.forEach(link => {
+                // Remove any existing active class
+                link.classList.remove('active');
+                
+                // Get the href attribute
+                const href = link.getAttribute('href');
+                
+                // Check if the link matches the current page
+                if (href && (
+                    currentPage.includes(href.split('/').pop()) ||
+                    (currentPage.endsWith('/portfolio/') && href.includes('index.html')) ||
+                    (currentPage.endsWith('/portfolio') && href.includes('index.html'))
+                )) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
