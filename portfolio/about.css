@@ -91,10 +91,11 @@
 }
 .hero-heading {
     margin-top: 22px;
-    margin-left: 35px;
+    text-align: center;
+    margin-left: 260px;
     background: rgb(25, 31, 55);
     color: white;
-    width: 90%;
+    width: 57%;
     min-height: 300px;
     background: linear-gradient(145deg, #0f172a, #020617);
     border-radius: 36px;
@@ -103,11 +104,12 @@
 }
 .my-btn {
     display: flex;
-    gap: 16px;
+    gap: 34px;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 45px;
     flex-direction: row;
     cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .my-btn a {
     text-decoration: none;
