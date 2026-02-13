@@ -143,8 +143,15 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(20px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
 }
 
 .hero-heading h1,
@@ -362,85 +369,139 @@ body {
         border-radius: 10px;
     }
 }
-.skill {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+
+/* Skills Section */
+.skills-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #1B1945 0% #764ba2 100%);
-    min-height: 100vh;
+    background: linear-gradient(135deg, #1B1945 0%, #764ba2 100%);
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
+
 .heading {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    /* Space between paragraph and cards */
+    max-width: 800px;
+    width: 100%;
+    z-index: 2;
 }
 
 .heading h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
 }
+
 .heading p {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0 auto;
     max-width: 600px;
-    margin: 0 auto 40px;
-    line-height: 1.7rem;
 }
-.skill::before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #fff, transparent);
-    margin: 0 160px; 
-}
-/* skill card container */
-.skill {
+
+/* Skills Grid */
+.skills-grid {
     display: flex;
     flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
     justify-content: center;
+    /* Centers cards horizontally */
     gap: 30px;
+    /* Proper spacing */
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+}
+
+/* Skill Card */
+.skill-card {
+    background: rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 25px;
+
+    /* Flex sizing for 4 in a row */
+    flex: 1 1 240px;
+    max-width: 280px;
+    min-width: 220px;
+
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-/* Glass effect card */
-.skill-card {
-    background: rgba(139, 92, 246, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 40px 30px;
-    width: 250px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
+
 .skill-card:hover {
-    transform: translateY(-10px);
-    background: rgba(139, 92, 246, 0.15);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    border-color: rgba(139, 92, 246, 0.6);
+    transform: translateY(-8px);
+    background: rgba(139, 92, 246, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    border-color: rgba(139, 92, 246, 0.4);
 }
+
 .skill-card img {
-    margin-bottom: 20px;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    margin-bottom: 24px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
     transition: transform 0.3s ease;
+    width: 60px;
+    height: auto;
 }
+
 .skill-card:hover img {
-    transform: scale(1.1 rotate(5deg));
+    transform: scale(1.1) rotate(5deg);
 }
+
 .skill-card h3 {
-    font-size: 1.5rem;
-    color: #a8acbb;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #e2e8f0;
+    margin-bottom: 12px;
     font-weight: 600;
 }
+
 .skill-card p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .skills-grid {
+        justify-content: center;
+    }
+}
 
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 60px 20px;
+    }
+
+    .heading h2 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        gap: 20px;
+    }
+
+    .skill-card {
+        padding: 30px 20px;
+        flex: 1 1 100%;
+        /* Full width on very small screens if needed, or stick to auto */
+        max-width: 350px;
+        /* Allow wider cards on mobile */
+    }
+}

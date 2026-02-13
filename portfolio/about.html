@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About page</title>
     <link rel="stylesheet" href="about.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-wrapper">
@@ -18,7 +20,7 @@
                 <span></span>
             </div>
             <ul>
-                <li ><a href="/portfolio/index.html" class="active">Home</a></li>
+                <li><a href="/portfolio/index.html" class="active">Home</a></li>
                 <li><a href="/portfolio/contact.html" class="active">Contact</a></li>
                 <li><a href="/portfolio/about.html" class="active">About</a></li>
                 <li><a href="/portfolio/project.html" class="active">Project</a></li>
@@ -29,54 +31,58 @@
         <h1>I'm Amrendra kumar</h1>
         <h2>FrontEnd Devloper & Technical content Writer</h2>
         <br>
-        <p>I'm a passionate full-stack developer with expertise in building modern, scalable web applications. I love turning ideas into reality through clean code.</p>
-    <div class="my-btn">
-        <a href="/portfolio/index.html" class="button1">Home</a>
-        <a href="/portfolio/project.html">View my project</a>
-    </div>
-    
-    </div>
-    </div>
-    <section class="skill">
+        <p>I'm a passionate full-stack developer with expertise in building modern, scalable web applications. I love
+            turning ideas into reality through clean code.</p>
+        <div class="my-btn">
+            <a href="/portfolio/index.html" class="button1">Home</a>
+            <a href="/portfolio/project.html">View my project</a>
+        </div>
 
+    </div>
+    </div>
+    <section class="skills-section">
         <div class="heading">
-            <h2>Technical Slill</h2>
+            <h2>TECHNICAL SKILL</h2>
             <p>Explore my expertise in modern web development technologies and frameworks that bring ideas to life</p>
         </div>
-        <span></span>
-    <div class="skill-card">
-        <img src="assets/freepik__html_icon.png" alt="" width="50">
-        <h3>HTML</h3>
-        <p>basic layout Design</p>
-    </div>
-    <div class="skill-card">
-        <img src="assets/css-3.png" alt="" width="50">
-        <h3>CSS</h3>
-        <p>Responsive Web design</p>
-    </div>
-    <div class="skill-card">
-        <img src="assets/js.png" alt="" width="50">
-        <h3>Javascript</h3>
-        <p>Interactive and responsive effect</p>
-    </div>
-    <div class="skill-card">
-        <img src="assets/react.png" alt="" width="50">
-        <h3>React</h3>
-        <p>basic layout Design</p>
-    </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="assets/freepik__html_icon.png" alt="HTML Icon" width="50">
+                <h3>HTML</h3>
+                <p>Basic Layout Design</p>
+            </div>
+            <div class="skill-card">
+                <img src="assets/css-3.png" alt="CSS Icon" width="50">
+                <h3>CSS</h3>
+                <p>Responsive Web Design</p>
+            </div>
+            <div class="skill-card">
+                <img src="assets/js.png" alt="JavaScript Icon" width="50">
+                <h3>Javascript</h3>
+                <p>Interactive and Responsive Effects</p>
+            </div>
+            <div class="skill-card">
+                <img src="assets/react.png" alt="React Icon" width="50">
+                <h3>React</h3>
+                <p>Component-Based UI</p>
+            </div>
+        </div>
     </section>
     <section class="experience">
         <h2>My Experience</h2>
-            <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-period"> 2024-present</span>
-                <h3>Junior Front End developer</h3>
-                <h4>Tech Mahindra</h4>
-                <p><p>Leading frontend development for client projects, building responsive UIs with React & modern CSS, and mentoring junior team members.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-period"> 2024-present</span>
+                    <h3>Junior Front End developer</h3>
+                    <h4>Tech Mahindra</h4>
+                    <p>
+                    <p>Leading frontend development for client projects, building responsive UIs with React & modern
+                        CSS, and mentoring junior team members.</p>
+                </div>
             </div>
-        </div>
         </div>
         <div class="timeline-item">
             <div class="timeline-dot"></div>
@@ -84,7 +90,8 @@
                 <span class="timeline-period"> 2024-present</span>
                 <h3>Senior Content Writer</h3>
                 <h4>Rejoicehub LLP</h4>
-                <p>Leading frontend development for client projects, building responsive UIs with React & modern CSS, and mentoring junior team members.</p>
+                <p>Leading frontend development for client projects, building responsive UIs with React & modern CSS,
+                    and mentoring junior team members.</p>
             </div>
         </div>
     </section>
@@ -96,25 +103,25 @@
             <div class="cta-text">
                 <p>I'm always interested in hearing about new projects and opportunities.</p>
             </div>
-        <div class="cta-button">
-            <a class="cta-primary-button" href="/portfolio/contact.html">Contact Me</a>
-            <a class="cta-secondary-button" href="/portfolio/project.html">View Project</a>
-        </div>
+            <div class="cta-button">
+                <a class="cta-primary-button" href="/portfolio/contact.html">Contact Me</a>
+                <a class="cta-secondary-button" href="/portfolio/project.html">View Project</a>
+            </div>
         </div>
     </section>
     <script>
         // Auto-highlight active navbar link based on current page URL
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.navbar a');
             const currentPage = window.location.pathname;
-            
+
             navLinks.forEach(link => {
                 // Remove any existing active class
                 link.classList.remove('active');
-                
+
                 // Get the href attribute
                 const href = link.getAttribute('href');
-                
+
                 // Check if the link matches the current page
                 if (href && (
                     currentPage.includes(href.split('/').pop()) ||
@@ -127,4 +134,5 @@
         });
     </script>
 </body>
+
 </html>
